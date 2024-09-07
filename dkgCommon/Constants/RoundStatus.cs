@@ -64,7 +64,7 @@ namespace dkgCommon.Constants
         {
             return RoundStatusConstants.GetRoundStatusById((short)NextStatusId());
         }
-        public RoundStatus CancelStatus()
+        public static RoundStatus CancelStatus()
         {
             return RoundStatusConstants.GetRoundStatusById((short)RStatus.Cancelled);
         }

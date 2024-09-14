@@ -27,9 +27,9 @@ using dkgCommon.Constants;
 
 namespace dkgCommon.Models
 {
-    public class StatusReport(string publicKey, string name, int roundId, NStatus status)
+    public class StatusReport(string address, string name, int roundId, NStatus status)
     {
-        public string PublicKey { get; set; } = publicKey;
+        public string Address { get; set; } = address;
         public string Name { get; set; } = name;
         public int RoundId { get; set; } = roundId;
         public NStatus Status { get; set; } = status;

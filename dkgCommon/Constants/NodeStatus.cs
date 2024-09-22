@@ -29,6 +29,7 @@ namespace dkgCommon.Constants
     public enum NStatus
     {
         NotRegistered = 0,
+        WaitingRegistration = 5,
         WaitingRoundStart = 10,
         RunningStepOne = 21,
         WaitingStepTwo = 22,
@@ -72,6 +73,12 @@ namespace dkgCommon.Constants
         {
             NodeStatusId = NStatus.NotRegistered,
             Name = "Not registered"
+        };
+
+        public static readonly NodeStatus WaitingRegistration = new()
+        {
+            NodeStatusId = NStatus.WaitingRegistration,
+            Name = "Waiting for registration"
         };
 
         public static readonly NodeStatus WaitingRoundStart = new()
@@ -130,6 +137,7 @@ namespace dkgCommon.Constants
 
         public static readonly NodeStatus[] NodeStatusArray = [
             NotRegistered,
+            WaitingRegistration,
             WaitingRoundStart,
             RunningStepOne,
             WaitingStepTwo,
